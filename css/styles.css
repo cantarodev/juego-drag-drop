@@ -209,6 +209,9 @@ body {
   font-size: 20px;
 }
 
+.theme-dark .contenedor .titulo {
+  background-color: #313553;
+}
 .theme-dark .contenedor .contenedor-lista-general .contenedor-lista-caracteristica {
   background-color: #302e3a;
   border-color: #1f1e25;
