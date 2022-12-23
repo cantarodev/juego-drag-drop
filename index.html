@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JUEGO ISO-25010</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+	<div class="contenedor" id="contenedor">
+		<div class="header">
+			<div id="tiempo" class="tiempo"></div>
+			<button type="button" id="iniciar">Iniciar</button>
+			<button type="button" id="reniciar">Reniciar</button>
+			<input type="checkbox" id="toggle" />
+			<label for="toggle" class="button"><i class="add-icon"></i></label>
+		</div>
+		<h1 class="titulo">Calidad de producto de software ISO/IEC 25010</h1>
+		<div class="contenedor-lista-general">
+			<div class="contenedor-lista-caracteristica">
+				<h5>Adecuación Funcional</h5>
+				<div class="lista-caracteristica" id="lista1"></div>
+			</div>
+			<div class="contenedor-lista-caracteristica">
+				<h5>Eficiencia de Desempeño</h5>
+				<div class="lista-caracteristica" id="lista2"></div>
+			</div>
+			<div class="contenedor-lista-caracteristica">
+				<h5>Compatibilidad</h5>
+				<div class="lista-caracteristica" id="lista3"></div>
+			</div>
+			<div class="contenedor-lista-caracteristica">
+				<h5>Usabilidad</h5>
+				<div class="lista-caracteristica" id="lista4"></div>
+			</div>
+			<div class="contenedor-lista-caracteristica">
+				<h5>Fiabilidad</h5>
+				<div class="lista-caracteristica" id="lista5"></div>
+			</div>
+			<div class="contenedor-lista-caracteristica">
+				<h5>Seguridad</h5>
+				<div class="lista-caracteristica" id="lista6"></div>
+			</div>
+			<div class="contenedor-lista-caracteristica">
+				<h5>Mantenibilidad</h5>
+				<div class="lista-caracteristica" id="lista7"></div>
+			</div>
+			<div class="contenedor-lista-caracteristica">
+				<h5>Portabilidad</h5>
+				<div class="lista-caracteristica" id="lista8"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="modal-resultado" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		aria-labelledby="mimodalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="mimodalLabel">Resultado</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Acertadas: <span id="acertadas"></span></p>
+					<p>No acertadas: <span id="no-acertadas"></span></p>
+					<p>Nota: <span id="nota"></span></p>
+					<p id="mensaje"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-secondary" onclick="reniciarJuego();">Reniciar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- fin Modal -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery/jquery-3.5.0.js"></script>
+	<script src="js/sortable/Sortable.min.js"></script>
+	<script src="js/fontawesome/0e2950bd52.js"></script>
+	<script src="js/reloj.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

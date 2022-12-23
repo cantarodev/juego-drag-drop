@@ -1,0 +1,77 @@
+{
+    
+    "caracteristica": [
+        {
+            "name": "Adecuación Funcional",
+            "items": [
+                "Completitud funcional",
+                "Corrección funcional",
+                "Pertinencia funcional"
+            ]
+        },
+        {
+            "name": "Eficiencia de Desempeño",
+            "items": [
+                "Comportamiento temporal",
+                "Utilización de recursos",
+                "Capacidad"
+            ]
+        },
+        {
+            "name": "Compatibilidad",
+            "items": [
+                "Coexistencia",
+                "Interoperabilidad"
+            ]
+        },
+        {
+            "name": "Usabilidad",
+            "items": [
+                "Inteligibilidad",
+                "Aprendizaje",
+                "Operabilidad",
+                "Protección frente a errores de usuario",
+                "Estética",
+                "Accesibilidad"
+            ]
+        },
+        {
+            "name": "Fiabilidad",
+            "items": [
+                "Madurez",
+                "Disponibilidad",
+                "Tolerancia a fallos",
+                "Capacidad de recuperación"
+            ]
+        },
+        {
+            "name": "Seguridad",
+            "items": [
+                "Confidencialidad",
+                "Integridad",
+                "No repudio",
+                "Autenticidad",
+                "Responsabilidad"
+            ]
+        },
+        {
+            "name": "Mantenibilidad",
+            "items": [
+                "Modularidad",
+                "Reusabilidad",
+                "Analizabilidad",
+                "Capacidad de ser modificado",
+                "Capacidad de ser probado"
+            ]
+        },
+        {
+            "name": "Portabilidad",
+            "items": [
+                "Adaptabilidad",
+                "Facilidad de instalación",
+                "Capacidad de ser reemplazado"
+            ]
+        }
+    ]
+
+}
