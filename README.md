@@ -1,8 +1,7 @@
 <h1 align="center"><em> Juego Drag-Drop ISO/IEC 25010 </em></h1>
 
 <p align="center">
-  <img src="" alt="imagen-previa-calculadora">
-  
+  <img src="https://user-images.githubusercontent.com/35185115/209582912-dee5d023-a603-4a0b-96cb-250d26193749.png" alt="imagen-previa-calculadora">
 </p>
 
 <h1>Descripción del juego</h1>
@@ -16,7 +15,7 @@
   <li>Permite activar el modo dark/light.</li>
   <li>Extra (al dar doble click en las subcaracterísticas mostrará un modal, donde podrás elegir la característca correspondiente a la que pertenece).</li>
   
-  <p>Una pequeña demostración ☝️</p>
+  <p>Demostración ☝️</p>
 
 <h1>Tecnologías utilizadas</h1>
   <li>HTML5.</li>
