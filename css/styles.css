@@ -116,6 +116,9 @@ body {
   color: #fff;
   box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
 }
+.theme-dark .modal .btn-close {
+  background-color: #aaaaaa;
+}
 
 .contenedor {
   width: 100%;
@@ -223,6 +226,24 @@ body {
 .theme-dark .contenedor .contenedor-lista-general .contenedor-lista-caracteristica .sub-caracteristica {
   background-color: #1f1e25;
   color: #fff;
+}
+
+.modal-caracteristica {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.modal-caracteristica .modal-body {
+  display: flex;
+  flex-direction: column;
+}
+.modal-caracteristica .modal-body a {
+  text-decoration: none;
+  font-size: 16px;
+  color: inherit;
+  padding: 5px;
+}
+.modal-caracteristica .modal-body a:hover {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {

@@ -60,7 +60,42 @@ const CARACTERISTICA = {
 getRandomInt = (max) => {
   return Math.floor(Math.random() * max);
 };
-// - función que permite el llenado de las sub-características a las cajas(caracteristicas) de la ISO/IEC 25010  de forma aleatorio.
+
+// - permite elegir la caracteristica a la que pertenece la subacacteristica elegida, una funcionalidad bastante
+// util si se desea jugar en un dispositivo movil
+dblClickSelect = () => {
+  const SUBCARACTERISTICAS = document.querySelectorAll(".sub-caracteristica");
+  const CARACTERISTICAS = document.querySelectorAll(".caracteristica-iso");
+  let subcaracteristica = "";
+  let doubleClicked = false;
+  let evento = "click";
+  if(window.innerWidth <= 768) evento = "touchstart";
+  SUBCARACTERISTICAS.forEach((elem) => {
+    elem.addEventListener(evento, function (event) {
+      if (doubleClicked) {
+        $("#modal-caracteristica").modal("show");
+        subcaracteristica = this;
+      }
+      doubleClicked = true;
+      setTimeout(() => {
+        doubleClicked = false;
+      }, 300);
+    });
+  });
+
+  CARACTERISTICAS.forEach((elem) => {
+    elem.addEventListener("click", function (event) {
+      let idCaracteristica = $(this).attr("id-data");
+      $("#" + idCaracteristica).append(subcaracteristica);
+      $("#modal-caracteristica").modal("hide");
+      subcaracteristica = "";
+      event.preventDefault();
+    });
+  });
+};
+// - fin
+
+// -- función que permite el llenado de las sub-características a las cajas(caracteristicas) de la ISO/IEC 25010  de forma aleatorio.
 llenarAleatorio = () => {
   let length = ARRAYS_KEYS.length;
   let key = -1;
@@ -78,12 +113,13 @@ llenarAleatorio = () => {
   </div>`;
     CARACTERISTICA[key].insertAdjacentHTML("beforeend", sub_caracteristica);
   });
+  dblClickSelect();
 };
-// - fin
+// -- fin
 
 llenarAleatorio();
 
-// -- function que permite realizar las comparaciones de las sub-caracteristicas con sus caracteristicas correspondientes.
+// --- function que permite realizar las comparaciones de las sub-caracteristicas con sus caracteristicas correspondientes.
 resultadoJuego = () => {
   // se realiza una peticion del archivo caracteristica.json donde se encuentra las caracteristicas con sus sub-caracteristicas correctas.
   fetch("json/caracteristica.json")
@@ -92,32 +128,34 @@ resultadoJuego = () => {
     })
     .then((jsonData) => sacarData(jsonData));
 };
-// -- fin
+// --- fin
 
 sacarData = (jsonData) => {
   let numero = 1;
-  
+
   for (data in jsonData) {
     for (let lista of jsonData[data]) {
       verificarData(lista, numero);
       numero++;
     }
   }
-  
+
   let color = "";
   let mensaje = "";
   let nota = Math.round((acertadas * 20) / LISTA_SUBCARACTERISTICA.length, 2); // se calcula la nota correspondiente
   //condicion para obtener el mensaje y el color con respecto a la nota obtenida
   nota <= 10
-  ? ((mensaje = "Necesitas conocer más sobre este tema. Tú puedes!"), (color = "#F00"))
-  : nota > 10 && nota < 16
-  ? ((mensaje = "¡Felicidades! no bajes la guardia."), (color = "#E49E43"))
-  : ((mensaje = "¡Excelente! Te espera un futuro prometedor."), (color = "#05A649"));
+    ? ((mensaje = "Necesitas conocer más sobre este tema. Tú puedes!"),
+      (color = "#F00"))
+    : nota > 10 && nota < 16
+    ? ((mensaje = "¡Felicidades! no bajes la guardia."), (color = "#E49E43"))
+    : ((mensaje = "¡Excelente! Te espera un futuro prometedor."),
+      (color = "#05A649"));
   mostrarResultado(acertadas, noAcertadas, nota, mensaje, color);
   implementarDragDrop("disable");
 };
 
-// --- funcion que permite verificar si la sub-carateristica pertenece a la caracteristica en especifico, 
+// -v funcion que permite verificar si la sub-carateristica pertenece a la caracteristica en especifico,
 //     si es correcto se le da su check, caso contrario una X correspondiente.
 verificarData = (lista, numero) => {
   $(".contenedor-lista-caracteristica").each(function () {
@@ -139,14 +177,14 @@ verificarData = (lista, numero) => {
         });
     }
   });
-}
-// --- fin
+};
+// -v fin
 
 reniciarJuego = () => {
   window.location.reload();
 };
 
-// -v funcion que permite mostrar el resultado del juego.
+// v funcion que permite mostrar el resultado del juego.
 mostrarResultado = (acertadas, noAcertadas, nota, mensaje, color) => {
   $("#reniciar").show("slow");
   $("#acertadas").text(acertadas);
@@ -154,10 +192,10 @@ mostrarResultado = (acertadas, noAcertadas, nota, mensaje, color) => {
   $("#nota").text(nota);
   $("#mensaje").text(mensaje);
   $("#mensaje").css({ color: color });
-}
-// -v fin
+};
+// v fin
 
-// v funcion que permite habilitar y deshabilitar la funcionalidad de drag-drop a cada una de las cajas(caracteristicas).
+// v- funcion que permite habilitar y deshabilitar la funcionalidad de drag-drop a cada una de las cajas(caracteristicas).
 implementarDragDrop = (option = false) => {
   if (option === "enable") {
     for (let listaX in CARACTERISTICA) {
@@ -171,8 +209,8 @@ implementarDragDrop = (option = false) => {
       $(CARACTERISTICA[listaX]).css({ "pointer-events": "none" });
     }
   }
-}
-// v fin
+};
+// v- fin
 
 implementarDragDrop("enable");
 
@@ -181,7 +219,7 @@ const BOTON_RENICIAR = document.getElementById("reniciar");
 const CONTENEDOR = document.querySelector("body");
 CONTENEDOR.classList.add("theme-light");
 
-// v- evento para cambiar de tema claro-oscuro(light-dark)
+// v-- evento para cambiar de tema claro-oscuro(light-dark)
 document.addEventListener("click", function (e) {
   let isCkecked = document.getElementById("toggle").checked;
   if (isCkecked) {
@@ -192,7 +230,7 @@ document.addEventListener("click", function (e) {
     CONTENEDOR.classList.add("theme-light");
   }
 });
-// v- fin
+// v-- fin
 
 BOTON_RENICIAR.addEventListener("click", function () {
   reniciarJuego();
