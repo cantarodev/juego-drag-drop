@@ -1,4 +1,4 @@
-let cont = 30; // limite de tiempo 30seg
+let cont = 60; // limite de tiempo 60seg
 
 function cargarTiempo(){
     $("#tiempo").css({ display: "block" });
