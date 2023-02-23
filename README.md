@@ -1,11 +1,11 @@
-<h1 align="center"><em> Juego Drag-Drop ISO/IEC 25010 </em></h1>
+<h1 align="center"><em> Juego ISO/IEC 25010 </em></h1>
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/35185115/209582912-dee5d023-a603-4a0b-96cb-250d26193749.png" alt="imagen-previa-calculadora">
 </p>
 
 <h1>Descripción del juego</h1>
-<p> El presente juego está orientado a los amantes de la tecnología (en especial, a los desarrolladores de software), donde uno tiene que demostrar sus conocimientos sobre la Calidad de Producto de Software (ISO/IEC 25010). Al iniciar el juego las subcaracterísticas serán ubicados de manera aleatoria. El jugador tiene que agrugar las subcaracterísticas con sus características correspondientes según el iso/iec 25010 en un determinado tiempo. Al finalizar el tiempo obtendrás una calificacón. El juego es adaptable a diferentes dispositivos y activarse en modo dark/light(oscuro/claro). Pruébalo 👉 <a href="https://cantarodev.github.io/juego-drag-drop/" target="_blank">Juego Drag-Drop<a/></p>
+<p> El presente juego está orientado a los amantes de la tecnología (en especial, a los desarrolladores de software), donde uno tiene que demostrar sus conocimientos sobre la Calidad de Producto de Software (ISO/IEC 25010). Al iniciar el juego las subcaracterísticas serán ubicados de manera aleatoria. El jugador tiene que agrugar las subcaracterísticas con sus características correspondientes según el iso/iec 25010 en un determinado tiempo. Al finalizar el tiempo obtendrás una calificacón. El juego es adaptable a diferentes dispositivos y activarse en modo dark/light(oscuro/claro). Pruébalo 👉 <a href="https://cantarodev.github.io/juego-iso-25010/" target="_blank">Juego Drag-Drop<a/></p>
 <h1>Funcionalidades del juego</h1>
   <li>Las subcaracterísticas se ubican de manera aleatoria(random).</li>
   <li>Al iniciar/reniciar el juego las subcaracterísticas tendrán nueva ubicación.</li>
